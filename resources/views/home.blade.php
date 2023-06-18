@@ -52,7 +52,7 @@
 
 
         <!-- Icons Grid-->
-        <section class="features-icons bg-light text-center " id="cara-pesan">
+        <section class="features-icons bg-light text-center pb-0" id="cara-pesan">
             <div class="container ">
                 <h2 class="mb-5">Cara Pesan!</h2>
                 <div class="row">
@@ -88,7 +88,7 @@
         </section>
         <!-- Image Showcases-->
     <!-- About Us-->
-    <section class="testimonials text-center bg-light">
+    <section class="testimonials text-center p-0 bg-light">
         <div class="container">
             <section id="about-us" class="testimonials text-center bg-light">
                 <h2 class="mb-5">About Us!</h2>

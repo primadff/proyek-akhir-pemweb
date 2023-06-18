@@ -12,7 +12,7 @@
                         <span class="text-danger h1 fw-bold mb-0"><em>Hap!</em></span>
                     </div>
 
-                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5" action="">
                         <form style="width: 23rem;">
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
