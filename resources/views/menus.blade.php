@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
     {{-- navbar --}}
     @include('parts.navbar')
     {{-- end of navbar --}}
