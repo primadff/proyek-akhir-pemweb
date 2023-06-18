@@ -77,7 +77,7 @@
         </div>
     </div>
 </section>
-{{-- <!-- Image Showcases-->
+<!-- Image Showcases-->
 <section class="showcase">
     <div class="container-fluid p-0">
         <div class="row g-0">
