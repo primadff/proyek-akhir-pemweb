@@ -4,15 +4,15 @@
 @section('content')
 <section class="h-100 h-custom">
     <div class="container h-100 py-5">
+      <a href="#" onclick="history.back()" class="btn btn-primary">Back   </a>
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
-  
           <div class="table-responsive">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col" class="h5">Cart</th>
-                  <th scope="col">Format</th>
+                  <th scope="col">Size</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
                 </tr>
@@ -23,14 +23,14 @@
                     <div class="d-flex align-items-center">
                       <img src="https://i.imgur.com/2DsA49b.webp" class="img-fluid rounded-3"
                         style="width: 120px;" alt="Book">
-                      <div class="flex-column ms-4">
-                        <p class="mb-2">Thinking, Fast and Slow</p>
-                        <p class="mb-0">Daniel Kahneman</p>
-                      </div>
+                        <div class="flex-column ms-4">
+                          <p class="mb-2">Cheese Overload</p>
+                          <p class="mb-0"><span style="font-weight: normal;">Keju Mozzarella, String Cheese, Cream Mayo, Keju Parmesan, White Cheese</span></p>
+                        </div>
                     </div>
                   </th>
                   <td class="align-middle">
-                    <p class="mb-0" style="font-weight: 500;">Digital</p>
+                    <p class="mb-0" style="font-weight: 500;">Regular</p>
                   </td>
                   <td class="align-middle">
                     <div class="d-flex flex-row">
@@ -38,7 +38,6 @@
                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                         <i class="fas fa-minus"></i>
                       </button>
-  
                       <input id="form1" min="0" name="quantity" value="2" type="number"
                         class="form-control form-control-sm" style="width: 50px;" />
   
@@ -58,13 +57,13 @@
                       <img src="https://i.imgur.com/Oj1iQUX.webp" class="img-fluid rounded-3"
                         style="width: 120px;" alt="Book">
                       <div class="flex-column ms-4">
-                        <p class="mb-2">Homo Deus: A Brief History of Tomorrow</p>
-                        <p class="mb-0">Yuval Noah Harari</p>
+                        <p class="mb-2">Meat Lovers</p>
+                        <p class="mb-0"><span style="font-weight : normal;"> Sapi, Daging Sapi Cincang, Sosis Sapi, Sosis Ayam, Keju Mozzarella</span></p>
                       </div>
                     </div>
                   </th>
                   <td class="align-middle border-bottom-0">
-                    <p class="mb-0" style="font-weight: 500;">Paperback</p>
+                    <p class="mb-0" style="font-weight: 500;">Personal</p>
                   </td>
                   <td class="align-middle border-bottom-0">
                     <div class="d-flex flex-row">
@@ -154,28 +153,26 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-xl-3">
+                <div class="col-lg-4 col-xl-4">
                   <div class="d-flex justify-content-between" style="font-weight: 500;">
                     <p class="mb-2">Subtotal</p>
-                    <p class="mb-2">$23.49</p>
+                    <p class="mb-2">IDR 78.000</p>
                   </div>
-  
+
                   <div class="d-flex justify-content-between" style="font-weight: 500;">
                     <p class="mb-0">Shipping</p>
-                    <p class="mb-0">$2.99</p>
+                    <p class="mb-0">IDR 3.000</p>
                   </div>
-  
+
                   <hr class="my-3">
-  
                   <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
                     <p class="mb-2">Total (tax included)</p>
-                    <p class="mb-2">$26.48</p>
+                    <p class="mb-2">IDR 81.000</p>
                   </div>
   
-                  <button type="button" class="btn btn-primary btn-block btn-lg">
-                    <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-primary btn-block btn-lg" style="text-align: right;">
+                    <div class="d-flex justify-content-end" style="font: 500">
                       <span>Checkout</span>
-                      <span>$26.48</span>
                     </div>
                   </button>
                 </div>
