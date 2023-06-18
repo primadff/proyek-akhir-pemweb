@@ -2,10 +2,11 @@
 
 @section('content')
 
-{{-- navbar --}}
-@include('parts.navbar')
-{{-- end of navbar --}}
+    {{-- navbar --}}
+    @include('parts.navbar')
+    {{-- end of navbar --}}
 
+ main
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -32,20 +33,23 @@
         <div class="carousel-caption d-none d-md-block">
           <h5>Tertarik Bergabung? Hubungi Kami!</h5>
           <a class="btn btn-danger mx-3" href="#about-us">About Us</a>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-</div>
-{{-- CAROUSEL END --}}
 
+    
+ main
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {{-- CAROUSEL END --}}
+
+ main
 <!-- Icons Grid-->
 <section class="features-icons bg-light text-center" id="cara-pesan">
     <div class="container">
@@ -72,37 +76,39 @@
                     <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto" style="color: #dc3545"></i></div>
                     <h3>Pizza-mu Siap Diantar!</h3>
                     <p class="lead mb-0">Driver akan segera <br> mengantarkan pesananmu!</p>
+ main
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Image Showcases-->
+    <section class="showcase">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Fully Responsive Design</h2>
+                    <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
+                <div class="col-lg-6 my-auto showcase-text">
+                    <h2>Updated For Bootstrap 5</h2>
+                    <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Easy to Use & Customize</h2>
+                    <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                </div>
+            </div>
+        </div>
+ main
     </div>
 </section>
-<!-- Image Showcases-->
-<section class="showcase">
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Fully Responsive Design</h2>
-                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-            </div>
-        </div>
-        <div class="row g-0">
-            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
-            <div class="col-lg-6 my-auto showcase-text">
-                <h2>Updated For Bootstrap 5</h2>
-                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
-            </div>
-        </div>
-        <div class="row g-0">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Easy to Use & Customize</h2>
-                <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <!-- About Us-->
 <section class="testimonials text-center bg-light">
     <div class="container">
@@ -158,3 +164,4 @@ document.querySelector('.btn[href="#about-us"]').addEventListener('click', funct
 
 </script>
 @endsection
+ main
