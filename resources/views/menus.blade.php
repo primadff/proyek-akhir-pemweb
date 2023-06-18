@@ -2,9 +2,9 @@
 
 @section('content')
 
-{{-- navbar --}}
-@include('parts.navbar')
-{{-- end of navbar --}}
+    {{-- navbar --}}
+    @include('parts.navbar')
+    {{-- end of navbar --}}
 
 
     {{-- START OF MENUS --}}
