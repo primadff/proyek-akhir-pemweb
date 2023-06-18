@@ -4,7 +4,8 @@
 @section('content')
 <section class="h-100 h-custom">
     <div class="container h-100 py-5">
-      <a href="#" onclick="history.back()" class="btn btn-primary">Back   </a>
+      <a href="#" onclick="history.back()" class="btn btn-danger mx-1 mb-4">Back</a>
+      {{-- Button Back --}}
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
           <div class="table-responsive">
@@ -21,7 +22,7 @@
                 <tr>
                   <th scope="row">
                     <div class="d-flex align-items-center">
-                      <img src="https://i.imgur.com/2DsA49b.webp" class="img-fluid rounded-3"
+                      <img src="{{ asset('assets/img/pizza1.jpg') }}" class="img-fluid rounded-3"
                         style="width: 120px;" alt="Book">
                         <div class="flex-column ms-4">
                           <p class="mb-2">Cheese Overload</p>
@@ -54,7 +55,7 @@
                 <tr>
                   <th scope="row" class="border-bottom-0">
                     <div class="d-flex align-items-center">
-                      <img src="https://i.imgur.com/Oj1iQUX.webp" class="img-fluid rounded-3"
+                      <img src="{{ asset('assets/img/pizza2.avif') }}" class="img-fluid rounded-3"
                         style="width: 120px;" alt="Book">
                       <div class="flex-column ms-4">
                         <p class="mb-2">Meat Lovers</p>
@@ -89,8 +90,8 @@
             </table>
           </div>
   
-          <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
-            <div class="card-body p-4">
+          <div class="card shadow-2-strong mb-5 mb-lg-5 mb-1" style="border-radius: 16px; ">
+            <div class="card-body pt-4 pb-0">
               <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
                   <form>
@@ -112,7 +113,7 @@
                       </div>
                       <div class="rounded border w-100 p-3">
                         <p class="d-flex align-items-center mb-0">
-                          <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>BCA
+                          <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>DANA
                         </p>
                       </div>
                     </div>
@@ -123,7 +124,7 @@
                       </div>    
                       <div class="rounded border w-100 p-3">
                         <p class="d-flex align-items-center mb-0">
-                          <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>BNI
+                          <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>QRIS
                         </p>
                       </div>
                     </div>
@@ -170,11 +171,11 @@
                     <p class="mb-2">IDR 81.000</p>
                   </div>
   
-                  <button type="button" class="btn btn-primary btn-block btn-lg" style="text-align: right;">
+                  <button type="button" class="btn btn-danger btn-block btn-lg" style="text-align: right;">
                     <div class="d-flex justify-content-end" style="font: 500">
-                      <span>Checkout</span>
+                        <span>Checkout</span>
                     </div>
-                  </button>
+                </button>                
                 </div>
               </div>
             </div>

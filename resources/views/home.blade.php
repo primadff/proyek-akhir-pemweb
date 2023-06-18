@@ -14,24 +14,24 @@
     </div>
     <div class="carousel-inner" >
       <div class="carousel-item active" >
-        <img src="{{ asset('assets/img/carousel-1.jpeg') }}" class="d-block w-100" alt="first-crsl" style="height: 500px">
+        <img src="{{ asset('assets/img/b.jpg') }}" class="d-block w-100" alt="first-crsl" style="height: 500px">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+            <h5>La<span style="color: red; font-style: italic;">Hap</span> Pizza-mu Dengan Order Sekarang!</h5>
+          <a class="btn btn-danger mx-3" href="/menus">Order</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('assets/img/carousel-2.jpg') }}" class="d-block w-100" alt="second-crsl" style="height: 500px">
+        <img src="{{ asset('assets/img/banPizza2.jpg') }}" class="d-block w-100" alt="second-crsl" style="height: 500px">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>Bingung Caranya Pesan? Klik Tutorial Di Bawah!</h5>
+          <a class="btn btn-danger mx-3" href="#cara-pesan">Tutorial</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('assets/img/carousel-1.jpeg') }}" class="d-block w-100" alt="third-crsl" style="height: 500px">
+        <img src="{{ asset('assets/img/banPizza1.jpg') }}" class="d-block w-100" alt="third-crsl" style="height: 500px">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h5>Tertarik Bergabung? Hubungi Kami!</h5>
+          <a class="btn btn-danger mx-3" href="#about-us">About Us</a>
         </div>
       </div>
     </div>
@@ -47,34 +47,37 @@
 {{-- CAROUSEL END --}}
 
 <!-- Icons Grid-->
-<section class="features-icons bg-light text-center">
+<section class="features-icons bg-light text-center" id="cara-pesan">
     <div class="container">
+        <h2 class="mb-5">Cara Pesan!</h2>
         <div class="row">
             <div class="col-lg-4">
-                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                    <h3>Fully Responsive</h3>
-                    <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                </div>
+                <div id="tentukan-pesananmu">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex"><i class="bi-cart-fill m-auto" style="color:#dc3545;"></i></div>
+                        <h3>Tentukan Pesananmu!</h3>
+                        <p class="lead mb-0">Pilih Pizza -> <br>Klik Tombol "Add to Cart"</p>
+                    </div>  
+                </div>             
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                    <h3>Bootstrap 5 Ready</h3>
-                    <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                    <div class="features-icons-icon d-flex"><i class="bi-cash m-auto" style="color:#dc3545"></i></div>
+                    <h3>Lakukan Pembayaran!</h3>
+                    <p class="lead mb-0">Pilih Metode Pembayaran -> <br>Isi Data Diri -> <br>Klik Tombol "Checkout"</p>
                 </div>
-            </div>
+            </div>                        
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                    <h3>Easy to Use</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                    <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto" style="color: #dc3545"></i></div>
+                    <h3>Pizza-mu Siap Diantar!</h3>
+                    <p class="lead mb-0">Driver akan segera <br> mengantarkan pesananmu!</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Image Showcases-->
+{{-- <!-- Image Showcases-->
 <section class="showcase">
     <div class="container-fluid p-0">
         <div class="row g-0">
@@ -99,34 +102,60 @@
             </div>
         </div>
     </div>
-</section>
-<!-- Testimonials-->
+</section> --}}
+<!-- About Us-->
 <section class="testimonials text-center bg-light">
     <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
+        <section id="about-us" class="testimonials text-center bg-light">
+            <h2 class="mb-5">About Us!</h2>
         <div class="row">
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                    <h5>Margaret E.</h5>
-                    <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                    <h5>Dzaky Ahmadin</h5>
+                    <h5>Berkah Wardhana</h5>
+                    <p class="font-weight-light mb-0">"Aku menyesal telah selingkuh"</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                    <h5>Fred S.</h5>
-                    <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                    <h5>Prima Daffa</h5>
+                    <h5>Al Kautsar</h5>
+                    <p class="font-weight-light mb-0">"Syahdi Dongki!"</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                    <h5>Sarah W.</h5>
-                    <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                    <h5>Depiero Muhammad</h5>
+                    <h5>Al Ghifari</h5>
+                    <p class="font-weight-light mb-0">"Tititku sebesar sosis Kanzler!"</p>
                 </div>
             </div>
         </div>
+        </section>
     </div>
 </section>
 @endsection
+
+<script>
+    document.querySelector('.btn[href="#cara-pesan"]').addEventListener('click', function (event) {
+    event.preventDefault();
+    const target = document.querySelector('#cara-pesan');
+    window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.btn[href="#about-us"]').addEventListener('click', function (event) {
+    event.preventDefault();
+    const target = document.querySelector('#about-us');
+    window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+    });
+});
+
+</script>
