@@ -89,7 +89,6 @@
               </tbody>
             </table>
           </div>
-  
           <div class="card shadow-2-strong mb-5 mb-lg-5 mb-1" style="border-radius: 16px; ">
             <div class="card-body pt-4 pb-0">
               <div class="row">

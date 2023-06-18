@@ -9,6 +9,7 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/menus">Our Menu</a></li>
             </ul>
+
             <form class="d-flex mt-1">
                 <a class="btn btn-outline-dark me-3" type="submit" href="/cart">
                     <i class="bi-cart-fill me-1"></i>
