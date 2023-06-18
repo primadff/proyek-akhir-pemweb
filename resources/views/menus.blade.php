@@ -8,296 +8,489 @@
 
 
     {{-- START OF MENUS --}}
-    <section class="py-5">
+    <section class="py-0">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-md-3  justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/american-favourite.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-5">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Hap Favourite</h5>
-                                <!-- Product price-->
-                                Rp.140.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Product Card</title>
+                <style>
+                  .card-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                  }
+                  .card {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 300px;
+                    text-align: center;
+                  }
+                  .card-title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                  }
+                  .item-image {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                  }
+                  .quantity {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  }
+                  .quantity input {
+                    width: 50px;
+                    text-align: center;
+                  }
+                  .quantity button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                  }
+                  .add-to-cart {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    cursor: pointer;
+                  }
+                </style>
+              </head>
+              <body>
+                <div class="card-container">
+                  <div class="card">
+                    <h2 class="card-title">American Favourite</h2>
+                    <img class="item-image" src="{{ asset('assets/img/american-favourite.jpg') }}" alt="Product Image">
+                    <div class="quantity">
+                      <button class="quantity-button" id="decreaseButton">-</button>
+                      <input type="number" class="quantity-input" id="quantityInput" value="0">
+                      <button class="quantity-button" id="increaseButton">+</button>
                     </div>
+                    <script>
+                      const decreaseButton = document.getElementById('decreaseButton');
+                      const increaseButton = document.getElementById('increaseButton');
+                      const quantityInput = document.getElementById('quantityInput');
+
+                      decreaseButton.addEventListener('click', () => {
+                      if (quantityInput.value > 0) {
+                        quantityInput.value--;
+                      }
+                    });
+
+                    increaseButton.addEventListener('click', () => {
+                      quantityInput.value++;
+                    });
+                    </script>
+                    <button class="add-to-cart">Add to Cart</button>
+                  </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/super-supreme-pizza.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Super Supreme Hap Signature</h5>
-                                <!-- Product price-->
-                                Rp.140.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+              </body>
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Product Card</title>
+                <style>
+                  .card-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                  }
+                  .card {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 300px;
+                    text-align: center;
+                  }
+                  .card-title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                  }
+                  .item-image {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                  }
+                  .quantity {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  }
+                  .quantity input {
+                    width: 50px;
+                    text-align: center;
+                  }
+                  .quantity button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                  }
+                  .add-to-cart {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    cursor: pointer;
+                  }
+                </style>
+              </head>
+              <body>
+                <div class="card-container">
+                  <div class="card">
+                    <h2 class="card-title">Supreme Happ Signature</h2>
+                    <img class="item-image" src="{{ asset('assets/img/super-supreme-pizza.jpg') }}" alt="Product Image">
+                    <div class="quantity">
+                      <button class="quantity-button" id="decreaseButton">-</button>
+                      <input type="number" class="quantity-input" id="quantityInput" value="0">
+                      <button class="quantity-button" id="increaseButton">+</button>
                     </div>
+                    <script>
+                      const decreaseButton = document.getElementById('decreaseButton');
+                      const increaseButton = document.getElementById('increaseButton');
+                      const quantityInput = document.getElementById('quantityInput');
+
+                      decreaseButton.addEventListener('click', () => {
+                      if (quantityInput.value > 0) {
+                        quantityInput.value--;
+                      }
+                    });
+
+                    increaseButton.addEventListener('click', () => {
+                      quantityInput.value++;
+                    });
+                    </script>
+                    <button class="add-to-cart">Add to Cart</button>
+                  </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/meat-lovers.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Meat Lovers Hap Signature</h5>
-                                <!-- Product price-->
-                                Rp.140.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+              </body>
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Product Card</title>
+                <style>
+                  .card-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                  }
+                  .card {
+                    width: 250px; 
+                    height: 500px; 
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 300px;
+                    text-align: center;
+                  }
+                  .card-title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                  }
+                  .item-image {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                  }
+                  .quantity {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  }
+                  .quantity input {
+                    width: 50px;
+                    text-align: center;
+                  }
+                  .quantity button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                  }
+                  .add-to-cart {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    cursor: pointer;
+                  }
+                </style>
+              </head>
+              <body>
+                <div class="card-container">
+                  <div class="card">
+                    <h2 class="card-title">Happ Meat Lovers</h2>
+                    <img class="item-image" src="{{ asset('assets/img/meat-lovers.jpg') }}" alt="Product Image">
+                    <div class="quantity">
+                      <button class="quantity-button" id="decreaseButton">-</button>
+                      <input type="number" class="quantity-input" id="quantityInput" value="0">
+                      <button class="quantity-button" id="increaseButton">+</button>
                     </div>
+                    <script>
+                      const decreaseButton = document.getElementById('decreaseButton');
+                      const increaseButton = document.getElementById('increaseButton');
+                      const quantityInput = document.getElementById('quantityInput');
+
+                      decreaseButton.addEventListener('click', () => {
+                      if (quantityInput.value > 0) {
+                        quantityInput.value--;
+                      }
+                    });
+
+                    increaseButton.addEventListener('click', () => {
+                      quantityInput.value++;
+                    });
+                    </script>
+                    <button class="add-to-cart">Add to Cart</button>
+                  </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/Pizza-Super-Supreme-Classic.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Pizza Hap Supreme Classic</h5>
-                                <!-- Product price-->
-                                Rp.124.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+              </body>
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Product Card</title>
+                <style>
+                  .card-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                  }
+                  .card {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 300px;
+                    text-align: center;
+                  }
+                  .card-title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                  }
+                  .item-image {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                  }
+                  .quantity {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  }
+                  .quantity input {
+                    width: 50px;
+                    text-align: center;
+                  }
+                  .quantity button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                  }
+                  .add-to-cart {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    cursor: pointer;
+                  }
+                </style>
+              </head>
+              <body>
+                <div class="card-container">
+                  <div class="card">
+                    <h2 class="card-title">Supreme Happ Classic</h2>
+                    <img class="item-image" src="{{ asset('assets/img/Pizza-Super-Supreme-Classic.jpg') }}" alt="Product Image">
+                    <div class="quantity">
+                      <button class="quantity-button" id="decreaseButton">-</button>
+                      <input type="number" class="quantity-input" id="quantityInput" value="0">
+                      <button class="quantity-button" id="increaseButton">+</button>
                     </div>
+                    <script>
+                      const decreaseButton = document.getElementById('decreaseButton');
+                      const increaseButton = document.getElementById('increaseButton');
+                      const quantityInput = document.getElementById('quantityInput');
+
+                      decreaseButton.addEventListener('click', () => {
+                      if (quantityInput.value > 0) {
+                        quantityInput.value--;
+                      }
+                    });
+
+                    increaseButton.addEventListener('click', () => {
+                      quantityInput.value++;
+                    });
+                    </script>
+                    <button class="add-to-cart">Add to Cart</button>
+                  </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/hawaiian-pizza.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Hawaiian Chicken Classic</h5>
-                                <!-- Product price-->
-                                Rp.124.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Product Card</title>
+                  <style>
+                    .card-container {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      height: 100vh;
+                    }
+                    .card {
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                      padding: 10px;
+                      width: 300px;
+                      text-align: center;
+                    }
+                    .card-title {
+                      font-weight: bold;
+                      margin-bottom: 10px;
+                    }
+                    .item-image {
+                      max-width: 100%;
+                      height: auto;
+                      margin-bottom: 10px;
+                    }
+                    .quantity {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    }
+                    .quantity input {
+                      width: 50px;
+                      text-align: center;
+                    }
+                    .quantity button {
+                      margin: 0 5px;
+                      padding: 5px 10px;
+                    }
+                    .add-to-cart {
+                      background-color: #007bff;
+                      color: #fff;
+                      border: none;
+                      border-radius: 4px;
+                      padding: 8px 16px;
+                      cursor: pointer;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <div class="card-container">
+                    <div class="card">
+                      <h2 class="card-title">Hawaiian Chicken Classic</h2>
+                      <img class="item-image" src="{{ asset('assets/img/hawaiian-pizza.jpg') }}" alt="Product Image">
+                      <div class="quantity">
+                      <button class="quantity-button" id="decreaseButton">-</button>
+                      <input type="number" class="quantity-input" id="quantityInput" value="0">
+                      <button class="quantity-button" id="increaseButton">+</button>
+                      </div>
+                      <script>
+                      const decreaseButton = document.getElementById('decreaseButton');
+                      const increaseButton = document.getElementById('increaseButton');
+                      const quantityInput = document.getElementById('quantityInput');
+
+                      decreaseButton.addEventListener('click', () => {
+                      if (quantityInput.value > 0) {
+                        quantityInput.value--;
+                      }
+                      });
+
+                      increaseButton.addEventListener('click', () => {
+                      quantityInput.value++;
+                      });
+                      </script>
+                      <button class="add-to-cart">Add to Cart</button>
                     </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ asset('assets/img/tuna-melt.jpg') }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Tuna Melt Classic</h5>
-                                <!-- Product price-->
-                                Rp.124.000
-                            </div>
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Simple Buttons and Input</title>
-                              </head>
-                              <body>
-                                <div style="text-align: center;">
-                                  <button onclick="decrease()">-</button>
-                                  <input type="text" id="itemCount" value="0" readonly>
-                                  <button onclick="increase()">+</button>
-                                </div>
-                              
-                                <script>
-                                  var itemCount = 0;
-                                  var itemCountElement = document.getElementById("itemCount");
-                              
-                                  function decrease() {
-                                    if (itemCount > 0) {
-                                      itemCount--;
-                                      itemCountElement.value = itemCount;
-                                    }
-                                  }
-                              
-                                  function increase() {
-                                    itemCount++;
-                                    itemCountElement.value = itemCount;
-                                  }
-                                </script>
-                              </body>
+                  </div>
+                  <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Product Card</title>
+                    <style>
+                      .card-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                      }
+                      .card {
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        padding: 10px;
+                        width: 300px;
+                        text-align: center;
+                      }
+                      .card-title {
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                      }
+                      .item-image {
+                        max-width: 100%;
+                        height: auto;
+                        margin-bottom: 10px;
+                      }
+                      .quantity {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 10px;
+                      }
+                      .quantity input {
+                        width: 50px;
+                        text-align: center;
+                      }
+                      .quantity button {
+                        margin: 0 5px;
+                        padding: 5px 10px;
+                      }
+                      .add-to-cart {
+                        background-color: #007bff;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 8px 16px;
+                        cursor: pointer;
+                      }
+                    </style>
+                  </head>
+                  <body>
+                    <div class="card-container">
+                      <div class="card">
+                        <h2 class="card-title">Tuna Melt Classic</h2>
+                        <img class="item-image" src="{{ asset('assets/img/tuna-melt.jpg') }}" alt="Product Image">
+                        <div class="quantity">
+                          <button class="quantity-button" id="decreaseButton">-</button>
+                          <input type="number" class="quantity-input" id="quantityInput" value="0">
+                          <button class="quantity-button" id="increaseButton">+</button>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
+                        <script>
+                          const decreaseButton = document.getElementById('decreaseButton');
+                          const increaseButton = document.getElementById('increaseButton');
+                          const quantityInput = document.getElementById('quantityInput');
+
+                          decreaseButton.addEventListener('click', () => {
+                          if (quantityInput.value > 0) {
+                            quantityInput.value--;
+                          }
+                        });
+
+                        increaseButton.addEventListener('click', () => {
+                          quantityInput.value++;
+                        });
+                        </script>
+                        <button class="add-to-cart">Add to Cart</button>
+                      </div>
                     </div>
+                    
                 </div>
                 
             </div>
