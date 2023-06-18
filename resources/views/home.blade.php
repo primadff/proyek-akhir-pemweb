@@ -137,8 +137,6 @@
         </section>
     </div>
 </section>
-@endsection
-
 <script>
     document.querySelector('.btn[href="#cara-pesan"]').addEventListener('click', function (event) {
     event.preventDefault();
@@ -159,3 +157,4 @@ document.querySelector('.btn[href="#about-us"]').addEventListener('click', funct
 });
 
 </script>
+@endsection
