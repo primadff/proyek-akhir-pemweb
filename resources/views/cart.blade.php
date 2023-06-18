@@ -1,6 +1,5 @@
 @extends('layouts.main')
 
-
 @section('content')
 <section class="h-100 h-custom">
     <div class="container h-100 py-5">
@@ -41,7 +40,7 @@
                       </button>
                       <input id="form1" min="0" name="quantity" value="2" type="number"
                         class="form-control form-control-sm" style="width: 50px;" />
-  
+
                       <button class="btn btn-link px-2"
                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                         <i class="fas fa-plus"></i>
@@ -72,10 +71,10 @@
                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                         <i class="fas fa-minus"></i>
                       </button>
-  
+
                       <input id="form1" min="0" name="quantity" value="1" type="number"
                         class="form-control form-control-sm" style="width: 50px;" />
-  
+
                       <button class="btn btn-link px-2"
                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                         <i class="fas fa-plus"></i>
@@ -120,7 +119,7 @@
                       <div class="d-flex align-items-center pe-2">
                         <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
                           value="" aria-label="..." />
-                      </div>    
+                      </div>
                       <div class="rounded border w-100 p-3">
                         <p class="d-flex align-items-center mb-0">
                           <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>QRIS
@@ -139,14 +138,14 @@
                     </div>
                       <div class="col-12 col-lg-5.5">
                       <div class="form-outline mb-2 mb-xl-2">
-                        <input type="text" id="typeExp" class="form-control form-control-lg" 
+                        <input type="text" id="typeExp" class="form-control form-control-lg"
                           placeholder="Nomor Handphone"
                           size="7" id="exp" minlength="7" maxlength="50" />
                       </div>
                     </div>
                     <div class="col-12 col-xl-12">
                       <div class="form-outline mb-7 mb-xl-5">
-                        <input type="text" id="typeExp" class="form-control form-control-lg" 
+                        <input type="text" id="typeExp" class="form-control form-control-lg"
                           placeholder="Alamat Penerima"
                           size="7" id="exp" minlength="7" maxlength="50" />
                       </div>
@@ -169,12 +168,12 @@
                     <p class="mb-2">Total (tax included)</p>
                     <p class="mb-2">IDR 81.000</p>
                   </div>
-  
+
                   <button type="button" class="btn btn-danger btn-block btn-lg" style="text-align: right;">
                     <div class="d-flex justify-content-end" style="font: 500">
                         <span>Checkout</span>
                     </div>
-                </button>                
+                </button>
                 </div>
               </div>
             </div>

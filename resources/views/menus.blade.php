@@ -4,7 +4,7 @@
     {{-- navbar --}}
     @include('parts.navbar')
     {{-- end of navbar --}}
-    
+
     {{-- START OF MENUS --}}
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -23,7 +23,7 @@
                           </div>
                           <!-- Input Quantity-->
                           <div class="input-group mt-3">
-                              <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                              <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                           </div>
                       </div>
                         <!-- Product actions-->
@@ -31,7 +31,7 @@
                           <div class="text-center"><a class="btn btn-danger btn-outline mt-auto text-white" href="#">Add to cart</a></div>
                         </div>
                     </div>
-              </div>            
+              </div>
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
@@ -46,7 +46,7 @@
                             </div>
                             <!-- Input Quantity-->
                           <div class="input-group mt-3">
-                            <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                            <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                           </div>
                         </div>
                         <!-- Product actions-->
@@ -69,7 +69,7 @@
                             </div>
                             <!-- Input Quantity-->
                             <div class="input-group mt-3">
-                              <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                              <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -94,7 +94,7 @@
                           </div>
                           <!-- Input Quantity-->
                           <div class="input-group mt-3">
-                            <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                            <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -117,7 +117,7 @@
                           </div>
                           <!-- Input Quantity-->
                           <div class="input-group mt-3">
-                            <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                            <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -140,7 +140,7 @@
                           </div>
                           <!-- Input Quantity-->
                           <div class="input-group mt-3">
-                            <input type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
+                            <input type="number" min="0" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="quantity-addon">
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -151,7 +151,7 @@
               </div>
             </div>
         </div>
-        
+
     </section>
     {{-- END OF MENUS --}}
 @endsection
