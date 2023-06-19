@@ -10,6 +10,12 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/menus">Our Menu</a></li>
             </ul>
 
+            {{-- @if (Auth::check())
+
+                kalo blom login gaakan muncul
+
+            @endif --}}
+
             <form class="d-flex mt-1">
                 <a class="btn btn-outline-dark me-3" type="submit" href="/cart">
                     <i class="bi-cart-fill me-1"></i>
@@ -18,6 +24,7 @@
                 </a>
                 <a class="btn btn-danger " href="/login">Sign In</a>
             </form>
+
         </div>
     </div>
 </nav>
