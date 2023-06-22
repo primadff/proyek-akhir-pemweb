@@ -21,4 +21,5 @@ Route::view('/', 'home');
 Route::view('/menus', 'menus');
 Route::view('/login', 'login');
 Route::view('/cart', 'cart');
-route::view('/register', 'register');
+Route::view('/register', 'register');
+Route::view('/homeDriver', 'driver.homeDriver');  
